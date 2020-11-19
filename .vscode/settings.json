@@ -1,0 +1,19 @@
+{
+    "vscode-simple-auto-reload.delay": 4000,
+    "files.associations": {
+        "*.html": "jekyll"
+    },
+    "emmet.includeLanguages": {
+        "jekyll": "html"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "variable.parameter.liquid,support.class.liquid,punctuation.output.liquid",
+                "settings": {
+                    "foreground": "#D4D4D4"
+                }
+            }
+        ]
+    }
+}

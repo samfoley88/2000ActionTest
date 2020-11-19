@@ -1,0 +1,19 @@
+---
+label: Article
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Article title
+  config:
+    required: true
+- type: text
+  name: author
+  label: Author
+  description: The author of the article (not necessarily the person entering the
+    content)
+  config:
+    required: true
+pages:
+- _posts/2020-04-30-2000-class-association-lockdown-quiz-two.md

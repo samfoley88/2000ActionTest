@@ -1,0 +1,70 @@
+---
+label: Venue
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Name
+  config:
+    required: true
+- type: text
+  name: address
+  label: Address
+- type: text
+  name: place
+  label: Place
+- type: text
+  name: postcode
+  label: Postcode
+- type: text
+  name: county
+  label: County
+- name: country
+  type: select
+  default: England
+  config:
+    required: true
+    options:
+    - England
+    - Scotland
+    - Wales
+    - Northern Ireland
+    - Outside UK
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Country
+  description: "(UK constituent) country"
+- type: number
+  name: lat
+  label: Latitude
+  description: Where the slipway crosses the (high) water line
+  config:
+    step: '0.000001'
+- type: number
+  name: lon
+  label: Longitude
+  description: Where the slipway crosses the (high) water line
+  config:
+    step: '0.000001'
+- type: text
+  name: email
+  label: Email address
+- type: text
+  name: website
+  label: Website
+  description: Including https://...
+  config:
+    required: true
+- type: text
+  name: telephone
+  label: Telephone
+pages:
+- _venues/brixham-yacht-club.md
+- _venues/itchenor-sailing-club.md
+- _venues/staunton-harold-sailing-club.md
+- _venues/weir-wood-sailing-club.md
+- _venues/wilsonian-sailing-club.md

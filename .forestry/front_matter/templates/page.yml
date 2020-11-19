@@ -1,0 +1,12 @@
+---
+label: Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+  config:
+    required: true
+pages:
+- about/Rules&Guides/boat-sail-numbers-year-of-registration.md
+- about/Rules&Guides/hull-colours.md

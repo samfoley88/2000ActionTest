@@ -1,0 +1,31 @@
+name: Website validation
+on: 
+  push:
+    branches:    
+    - master 
+  
+jobs:
+  validation:
+    name: Website validation
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v1
+      with:
+        ref: master
+    - name: Run Jekyll
+      uses: docker://faph/action-jekyll:1.5
+    - name: HTML5 validation
+      uses: docker://validator/validator@sha256:7f4f336d3df5907751848b53aceb347d160384b9840a2d87b5b87b3836557b2b
+      with:
+        entrypoint: /vnu-runtime-image/bin/vnu
+        args: --verbose --skip-non-html _site
+    - name: CSS validation
+      uses: docker://validator/validator@sha256:7f4f336d3df5907751848b53aceb347d160384b9840a2d87b5b87b3836557b2b
+      with:
+        entrypoint: /vnu-runtime-image/bin/vnu
+        args: --verbose --css _site/assets/css/styles.css
+    - name: iCalendar validation
+      uses: docker://faph/icalendar-validator:1.1
+      with:
+        args: --verbose _site/events.ics 
