@@ -2,7 +2,7 @@ name: Website validation
 on: 
   push:
     branches:    
-    - master 
+    - main 
   
 jobs:
   validation:

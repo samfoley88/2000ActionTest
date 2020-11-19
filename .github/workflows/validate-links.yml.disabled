@@ -13,4 +13,4 @@ jobs:
     - name: W3C check links
       uses: docker://stupchiy/checklink@sha256:0c09ab38a21b48c9bda6829e1ef9a7122f50fbc7ff70785029dfe09d1063b69c
       with:
-        args: https://beta.2000class.org  --recursive
+        args: https://2000class.unifiedtechnicalsolutions.co.uk/  --recursive
