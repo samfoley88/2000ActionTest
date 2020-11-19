@@ -1,0 +1,15 @@
+---
+layout: page
+---
+
+<dl>
+  <dt>Dates</dt>
+  <dd>{% include daterange.html from=page.date to=page.date_end %}</dd>
+  <dt>Venue</dt>
+  <dd>{% include venue-title.html path=page.venue link=true %}</dd>
+</dl>
+
+{% include venue-chart.html path=page.venue %}
+
+{{ content }}
+

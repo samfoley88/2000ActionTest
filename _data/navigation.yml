@@ -1,0 +1,25 @@
+- name: Home
+  link: /
+- name: News
+  link: /news.html
+- name: Events
+  link: /events.html
+- name: Results
+  link: /results
+- name: Gallery
+  link: /gallery.html
+- name: Videos
+  link: /videos.html
+- name: About
+  link: /about/
+  items:
+  - name: Join us
+    link: /about/join.html
+  - name: Sponsors
+    link: /sponsors.html
+  - name: Constitution
+    link: /about/constitution.html
+  - name: Committee
+    link: /about/committee.html
+  - name: Rules & Guides
+    link: /about/Rules&Guides/

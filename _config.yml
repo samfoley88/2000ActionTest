@@ -1,0 +1,78 @@
+url: https://2000class.unifiedtechnicalsolutions.co.uk
+title: 2000 Class Association
+subtitle: Probably the best entry-level family performance asymmetric sailing dinghy in the world!
+description: >
+  The 2000 Class Association is the official association for the 2000 sailing 
+  dinghy. The 2000, previously known as the Laser 2000, is an entry-level 
+  performance assymmetric sailing dinghy. The boat is sailed by serious racers
+  and families alike.
+author: 2000 Class Association
+established: 1999
+email:
+  info@2000class.org
+twitter:
+  username: 2000class
+  card: summary
+facebook:
+  publisher: https://www.facebook.com/2000classassociation/
+social:
+  links:
+    - mailto:info@2000class.org
+    - https://www.facebook.com/2000classassociation/
+    - https://twitter.com/2000class
+logo: /assets/img/logo-2000-class-association.png
+licence: https://creativecommons.org/licenses/by/4.0/
+lang: en_GB
+future: true  # Publish future dated news and events
+chart_key: Navionics_webapi_03675
+
+collections:
+  events:
+    output: true
+  sponsors:
+    output: false
+    sort_by: order
+  venues:
+    output: false
+  gallery:
+    output: true
+  videos:
+  results:
+    output: true
+    
+
+defaults:
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "gallery"
+    values:
+      layout: "gallery"
+  - scope:
+      path: ""
+      type: "results"
+    values:
+      layout: "results"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - "*.ps1"
+  - vendor/

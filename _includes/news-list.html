@@ -1,0 +1,17 @@
+<a class="homepageHeaderLink" href="/news"><h2>News and articles</h2></a>
+<p class="mb-3">
+  {% include icon-link.html url="/feed.xml" icon="fa fa-rss" text="Subscribe to this news feed" %}
+</p>
+
+{% for post in site.posts %}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: '%e %b %Y' }}</h6>
+      <h5 class="card-title"><a href="{{ post.url | absolute_url }}" >{{ post.title }}</a></h5>
+      {{ post.excerpt }}
+      <a href="{{ post.url | absolute_url }}" class="card-link">Read more &raquo;</a>
+    </div>
+  </div>
+{% endfor %}
+
+<a href="{{ "/news.html" | absolute_url }}">More news and articles &raquo;</a>

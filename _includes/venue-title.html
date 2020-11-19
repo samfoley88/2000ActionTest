@@ -1,0 +1,7 @@
+{%- assign venue = site.venues | where:"path", include.path | first -%}
+{%- assign addlink = include.link | default: false -%}
+{%- if addlink and venue.website -%}
+  {%- include external-link.html url=venue.website text=venue.title -%}
+{%- else -%}
+  {{- venue.title -}}
+{%- endif -%}

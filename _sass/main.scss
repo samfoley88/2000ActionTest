@@ -1,0 +1,71 @@
+@import "gallery", "videoGallery", "sponsors", "navigation", "results";
+
+// Font Awesome imports
+// Font folder path relative to compiled CSS folder
+$fa-font-path: "../fonts/fontawesome";
+@import "fontawesome/fontawesome.scss", "fontawesome/regular.scss", "fontawesome/solid.scss", "fontawesome/brands.scss";
+
+html {
+  font-size: 0.85rem;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 3.5rem;
+}
+
+.jumbotron {
+  background: url('../img/boats.jpg');
+  background-position: center bottom; 
+  color: white;
+  padding-bottom: 0.5rem;
+}
+
+mark {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+main {
+  p {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.display-3 {
+  font-size: min(10vw,4.5rem);
+}
+
+#nautical-chart {
+  width: 100%;
+  height: 300px;
+}
+
+.icon-link {
+  vertical-align: bottom;
+  a {
+    svg {
+      color: #212529;
+      vertical-align: top;
+    }
+  }
+}
+
+.external-link {
+  vertical-align: bottom;
+  a {
+    svg {
+      vertical-align: top;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+a.homepageHeaderLink {
+  color: inherit;
+}
