@@ -12,9 +12,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout main
+      uses: actions/checkout@v2
+      with:
+        path: ${{ github.workspace }}/main
+    - name: Checkout gh-pages
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: ${{ github.workspace }}/_site
+    - name: Clear out gh-pages branch repo
+      run: |
+          cd ${{ github.workspace }}/_site
+          git rm -f -r ./
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --baseurl ''"
+        -v ${{ github.workspace }}/main:/srv/jekyll \
+        -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest \
+        /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --baseurl ''"
+    - name: Commit to gh-pages
+      run: |
+          cd ${{ github.workspace }}/_site
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Auto-commit after build"
+          git push
