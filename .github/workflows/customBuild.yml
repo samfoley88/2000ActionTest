@@ -2,13 +2,16 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - master
+#  pull_request:
+#    branches:
+#      - main
+#      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +19,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         path: ${{ github.workspace }}/main
-    - name: Checkout and empty gh-pages
+    - name: Checkout gh-pages
       uses: actions/checkout@v2
       with:
         ref: gh-pages
