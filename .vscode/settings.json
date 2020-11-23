@@ -1,10 +1,7 @@
 {
-    "vscode-simple-auto-reload.delay": 4000,
+    "vscode-simple-auto-reload.delay": 3000,
     "files.associations": {
         "*.html": "jekyll"
-    },
-    "emmet.includeLanguages": {
-        "jekyll": "html"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [
